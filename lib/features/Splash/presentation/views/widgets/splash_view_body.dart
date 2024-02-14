@@ -30,9 +30,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       children: [
         Center(
           child: Image.asset(
-            'assets/images/bookly_logo.png',
-            width: 300,
-            height: 300,
+            'assets/images/Logo.png',
           ),
         ),
         AnimatedBuilder(
