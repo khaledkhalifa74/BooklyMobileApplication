@@ -70,7 +70,7 @@ class BestSellerListViewItem extends StatelessWidget {
                       const Spacer(),
                       const BookRating(
                         rate: '4.8',
-                        ratingNumber: '(2333)',
+                        ratingNumber: '2333',
                       ),
                     ],
                   ),
@@ -85,13 +85,15 @@ class BestSellerListViewItem extends StatelessWidget {
 }
 
 class BookRating extends StatelessWidget {
-  const BookRating({super.key, required this.rate, required this.ratingNumber});
+  const BookRating({super.key, required this.rate, required this.ratingNumber, this.mainAxisAlignment = MainAxisAlignment.start});
   final String rate;
   final String ratingNumber;
+  final MainAxisAlignment mainAxisAlignment;
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: mainAxisAlignment,
       children: [
         const Icon(
           Icons.star_rounded,
@@ -110,7 +112,7 @@ class BookRating extends StatelessWidget {
           width: 4,
         ),
         Text(
-          ratingNumber,
+          "($ratingNumber)",
           style: Styles.textStyle14.copyWith(
             color: Colors.grey
           ),
