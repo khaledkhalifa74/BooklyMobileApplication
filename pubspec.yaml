@@ -39,6 +39,7 @@ dependencies:
   go_router: ^13.2.0
   dartz: ^0.10.1
   dio: ^5.4.0
+  flutter_bloc: ^8.1.4
 
 dev_dependencies:
   flutter_test:
