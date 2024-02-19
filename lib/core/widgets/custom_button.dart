@@ -2,12 +2,13 @@ import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.borderRadius, required this.text, required this.textColor, required this.backgroundColor});
+  const CustomButton({super.key, this.borderRadius, required this.text, required this.textColor, required this.backgroundColor, this.onPressed});
 
   final BorderRadiusGeometry? borderRadius;
   final String text;
   final Color textColor;
   final Color backgroundColor;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
